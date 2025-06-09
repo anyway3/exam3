@@ -24,13 +24,22 @@ int main() {
 	for(int i = 0; i < vec.count; i++) {
 		std::cout << vec.arr[i] << " "; // 배열의 모든 요소 출력
 	}
+	std::cout << std::endl;
+	std::cout <<"사용중인 배열 크기: " << vec.getSize()<<"\n배열 총 크기: "<<vec.size<<std::endl; // 현재 크기와 용량 출력
 std::cout<<"배열 제거"<< std::endl;
 	for(int i = 0; i < 5; i++) {
 		std::cout << vec.pop_back() << " "; // 마지막 요소 제거 및 출력
 	}
+	std::cout << "\n사용중인 배열 크기: " << vec.getSize() << "\n배열 총 크기: " << vec.size << std::endl; // 현재 크기와 용량 출력
 	std::cout << std::endl;
 	std::cout << "제거 후 배열 출력: ";
 	for(int i = 0; i < vec.count; i++) {
 		std::cout << vec.arr[i] << " "; // 제거 후 배열의 모든 요소 출력
+	}
+	std::cout << std::endl;
+
+	std::cout << "배열을 넘어서는 값 제거 시도\n";
+	for (int i = 0; i < 8; i++) {
+		std::cout << vec.pop_back() << " "; // 마지막 요소 제거 및 출력
 	}
 }

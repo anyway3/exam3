@@ -42,6 +42,9 @@ public:
 			return T(); // 기본값 반환
 		}
 	}
+	int getSize() const {
+		return count; // 현재 크기 반환
+	}
 };
 
 
